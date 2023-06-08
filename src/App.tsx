@@ -30,6 +30,7 @@ import LandingPage from './LandingPage';
 import SignIn from './auth/SignIn';
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5"
 import { createStackNavigator } from '@react-navigation/stack';
+import SignUp from './auth/SignUp';
 const Stack = createStackNavigator()
 function App(): JSX.Element {
   
@@ -51,6 +52,14 @@ function App(): JSX.Element {
         component={SignIn}
         options={{
           header:()=>null,
+          
+         }}
+      />
+      <Stack.Screen
+        name="SignUp"
+        component={SignUp}
+        options={{
+          // header:()=>null,
           
          }}
       />
