@@ -27,6 +27,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import LandingPage from './LandingPage';
+import SignIn from './auth/SignIn';
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5"
 import { createStackNavigator } from '@react-navigation/stack';
 const Stack = createStackNavigator()
@@ -34,13 +35,24 @@ function App(): JSX.Element {
   
   return (
     <NavigationContainer>
-     <Stack.Navigator>
+     <Stack.Navigator
+      initialRouteName='Landing_Page'
+     >
       <Stack.Screen
        name="Landing_Page"
        component={LandingPage}
        options={{
         header:()=>null,
+        
        }}
+      />
+      <Stack.Screen
+        name="Signin"
+        component={SignIn}
+        options={{
+          header:()=>null,
+          
+         }}
       />
      </Stack.Navigator>
     </NavigationContainer>

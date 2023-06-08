@@ -1,10 +1,17 @@
-import React from 'react'
-import { View, Text ,StyleSheet} from 'react-native'
+import React ,{useEffect}from 'react'
+import { View, Text ,StyleSheet, Image} from 'react-native'
 
-const LandingPage = () => {
+const LandingPage = ({navigation}:any) => {
+   useEffect(() => {
+    setTimeout(() => {
+       navigation.replace('Signin')
+    }, 3000);
+   }, [])
+   
   return (
     <View style={styles.body}>
-      <Text style={styles.text}>LandingPage</Text>
+      <Image source={require("../assets/hello.png")}/>
+      <Text style={styles.text}>Not Just Another Payment App</Text>
     </View>
   )
 }
@@ -14,11 +21,13 @@ const styles = StyleSheet.create({
       flex:1,
       alignItems:'center',
       justifyContent:'center',
-      backgroundColor:'#ffff00'
+      backgroundColor:'#FFF7F2'
     },
     text:{
-      fontSize:40,
-      color:'#000000'
+      fontSize:30,
+      color:'#000000',
+      textAlign:'center',
+      // margin:'10'
     }
 });
 export default LandingPage
