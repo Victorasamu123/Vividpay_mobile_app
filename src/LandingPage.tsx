@@ -10,8 +10,7 @@ const LandingPage = ({navigation}:any) => {
    
   return (
     <View style={styles.body}>
-      <Image source={require("../assets/hello.png")}/>
-      <Text style={styles.text}>Not Just Another Payment App</Text>
+      <Text style={styles.text}>VIVIDPAY</Text>
     </View>
   )
 }
@@ -21,11 +20,12 @@ const styles = StyleSheet.create({
       flex:1,
       alignItems:'center',
       justifyContent:'center',
-      backgroundColor:'#FFF7F2'
+      backgroundColor:'#623ECA'
     },
     text:{
-      fontSize:30,
-      color:'#000000',
+      fontSize:70,
+      color:'#FFF7F2',
+      fontWeight:'600',
       textAlign:'center',
       // margin:'10'
     }
