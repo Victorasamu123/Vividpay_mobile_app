@@ -56,7 +56,7 @@ const SignIn = ({navigation}:any) => {
           </Text>
         </Pressable>
         <View>
-            <Text style={styles.qes}>Do not have an Account? <Text onPress={()=>navigation.navigate('SignUp')}>Signup</Text></Text>
+            <Text style={styles.qes}>Do not have an Account? <Text onPress={()=>navigation.navigate('SignUp')} style={styles.qes2}>Signup</Text></Text>
         </View>
       </View>
     </ImageBackground>
@@ -127,5 +127,12 @@ const styles = StyleSheet.create({
     color:'black',
     fontSize:20,
     marginTop:20, 
+    textAlign:"center"
+ },
+ qes2:{
+    color:'#623ECA',
+    fontSize:22,
+    marginTop:20, 
+    fontWeight:'500'
  }
 })
