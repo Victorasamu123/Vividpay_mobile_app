@@ -32,6 +32,7 @@ import FontAwesome5 from "react-native-vector-icons/FontAwesome5"
 import { createStackNavigator } from '@react-navigation/stack';
 import SignUp from './auth/SignUp';
 import CompSignup from './auth/CompSignup';
+import Home from './home/Home';
 const Stack = createStackNavigator()
 function App(): JSX.Element {
   
@@ -67,10 +68,18 @@ function App(): JSX.Element {
         name="CompSignup"
         component={CompSignup}
         options={{
-          // header:()=>null,
+          header:()=>null,
+         }}
+      />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{
+          header:()=>null,
          }}
       />
      </Stack.Navigator>
+     {/* <Home/> */}
     </NavigationContainer>
   );
 }

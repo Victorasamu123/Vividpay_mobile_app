@@ -40,7 +40,7 @@ const SignIn = ({navigation}:any) => {
       </View>
       <View style={styles.inputholder}>
         <TextInput placeholder='Enter email address' style={inputStyles} placeholderTextColor="#757576" onFocus={handleFocus}
-      onBlur={handleBlur}/>
+      onBlur={handleBlur} keyboardType="email-address"/>
       <TextInput placeholder='Password should contain at least 8 characters' style={inputStyles2} placeholderTextColor="#757576" onFocus={handleFocus2}
       onBlur={handleBlur2} secureTextEntry={!showPassword}
       value={password}
