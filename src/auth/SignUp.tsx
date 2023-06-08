@@ -1,5 +1,5 @@
 import React , {useState}from 'react'
-import { StyleSheet, Text, View, ImageBackground, Image,TextInput , Pressable} from 'react-native'
+import { StyleSheet, Text, View, ImageBackground, Image,TextInput , Pressable,ScrollView} from 'react-native'
 
 const SignUp = ({navigation}:any) => {
     const [isFocused, setIsFocused]=useState(false);
@@ -20,11 +20,11 @@ const SignUp = ({navigation}:any) => {
         setIsFocused2(false);
       };
       const handleFocus3 = () => {
-        setIsFocused2(true);
+        setIsFocused3(true);
       };
     
       const handleBlur3 = () => {
-        setIsFocused2(false);
+        setIsFocused3(false);
       };
     
       const inputStyles = [
@@ -37,12 +37,13 @@ const SignUp = ({navigation}:any) => {
       ];
       const inputStyles3 = [
         styles.input3,
-        isFocused2 ? styles.inputFocused : null,
+        isFocused3 ? styles.inputFocused : null,
       ];
       const proceed=()=>{
         navigation.navigate('CompSignup')
       }
   return (
+    <ScrollView>
     <ImageBackground source={require('../../assets/svgexport-1.png')} style={styles.body}>
     <View >
       <Image source={require('../../assets/hello.png')}/>
@@ -71,6 +72,7 @@ const SignUp = ({navigation}:any) => {
       </View>
     </View>
   </ImageBackground>
+  </ScrollView>
   )
 }
 
