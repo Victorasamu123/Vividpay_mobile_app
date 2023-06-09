@@ -33,6 +33,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SignUp from './auth/SignUp';
 import CompSignup from './auth/CompSignup';
 import Home from './home/Home';
+import Transactions from './home/Transactions';
 const Stack = createStackNavigator()
 function App(): JSX.Element {
   
@@ -76,6 +77,13 @@ function App(): JSX.Element {
         component={Home}
         options={{
           header:()=>null,
+         }}
+      />
+      <Stack.Screen
+        name="Transactions"
+        component={Transactions}
+        options={{
+          // header:()=>null,
          }}
       />
      </Stack.Navigator>

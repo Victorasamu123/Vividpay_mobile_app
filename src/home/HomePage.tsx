@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const HomePage = () => {
+const HomePage = ({navigation}:any) => {
   return (
     <View style={styles.body}>
         {/* //heder */}
@@ -31,7 +31,7 @@ const HomePage = () => {
          <View style={styles.trans}>
         <View style={styles.transhead}>
         <Text style={styles.text}>Transaction</Text>
-        <Text style={styles.text}>View All<Image source={require("../../assets/svgexport-3.png")}/></Text>
+        <Text style={styles.text} onPress={()=>navigation.navigate('Transactions')}>View All<Image source={require("../../assets/svgexport-3.png")}/></Text>
         </View>
          </View>
          {/* end of body */}
