@@ -12,6 +12,9 @@ const Home = () => {
         <Tab.Screen 
          name="HomePage"
          component={HomePage}
+         options={{
+            header:()=>null
+         }}
         />
       </Tab.Navigator>
   )
