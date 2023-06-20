@@ -1,9 +1,10 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View , ScrollView} from 'react-native'
 import React from 'react'
 
 const HomePage = ({navigation}:any) => {
   return (
-    <View style={styles.body}>
+     <View style={styles.body}>
+       <ScrollView>
         {/* //heder */}
         <View style={styles.headerView}>
         <Text style={styles.dashtext}>Dashboard</Text>
@@ -39,29 +40,30 @@ const HomePage = ({navigation}:any) => {
          </View>
          {/* second three bch */}
          <View style={styles.fitsttwocarrier}>
-            <View style={styles.firstbch}>
-                <Image source={require('../../assets/svgexport-5.png')}/>
-                <Text style={styles.sendmoney}>Send Money</Text>
+            <View style={styles.fourbch}>
+                <Image source={require('../../assets/svgexport-8.png')}/>
+                <Text style={styles.airtime}>Airtime</Text>
             </View>
-            <View style={styles.secondbch}>
-                <Image source={require('../../assets/svgexport-6.png')}/>
-                <Text style={styles.fundwallet}>Fund Wallet</Text>
+            <View style={styles.fivebch}>
+                <Image source={require('../../assets/svgexport-9.png')}/>
+                <Text style={styles.paybills}>Pay Bills</Text>
             </View>
-            <View style={styles.thirdbch}>
-                <Image source={require('../../assets/svgexport-7.png')}/>
-                <Text style={styles.cashpin}>Cashpin</Text>
+            <View style={styles.sixbch}>
+                <Image source={require('../../assets/svgexport-10.png')}/>
+                <Text style={styles.viewall}>View All</Text>
             </View>
          </View>
          {/* transactio history */}
-         {/* <View style={styles.trans}>
+         <View style={styles.trans}>
         <View style={styles.transhead}>
         <Text style={styles.text}>Transaction</Text>
         <Text style={styles.text} onPress={()=>navigation.navigate('Transactions')}>View All<Image source={require("../../assets/svgexport-3.png")}/></Text>
         </View>
-         </View> */}
+         </View>
 
          {/* end of body */}
         </View>
+    </ScrollView>
     </View>
   )
 }
@@ -176,9 +178,9 @@ const styles = StyleSheet.create({
      firstbch:{
        width:'27%',
        height:80,
-       backgroundColor:'#FBF1F1',
+       backgroundColor:'#FFF3F7',
        borderRadius:6,
-       elevation:5,
+       elevation:1,
        alignItems:'center',
        justifyContent:'center',
 
@@ -193,7 +195,7 @@ const styles = StyleSheet.create({
        height:80,
        backgroundColor:'#F0F7F4',
        borderRadius:6,
-       elevation:5,
+       elevation:1,
        alignItems:'center',
        justifyContent:'center',
      },
@@ -205,14 +207,56 @@ const styles = StyleSheet.create({
      thirdbch:{
        width:'27%',
        height:80,
-       backgroundColor:'#F7F6FC',
+       backgroundColor:'#F7F7FF',
        borderRadius:6,
-       elevation:5,
+       elevation:1,
        alignItems:'center',
        justifyContent:'center',
      },
      cashpin:{
         color:'#4317C0',
+        fontWeight:'500',
+        marginTop:5,
+     },
+     fourbch:{
+       width:'27%',
+       height:80,
+       backgroundColor:'#FCF8EE',
+       borderRadius:6,
+       elevation:1,
+       alignItems:'center',
+       justifyContent:'center',
+     },
+     airtime:{
+        color:'#8C6500',
+        fontWeight:'500',
+        marginTop:5,
+     },
+     fivebch:{
+       width:'27%',
+       height:80,
+       backgroundColor:'#F1F4FB',
+       borderRadius:6,
+       elevation:1,
+       alignItems:'center',
+       justifyContent:'center',
+     },
+     paybills:{
+        color:'#013AC0',
+        fontWeight:'500',
+        marginTop:5,
+     },
+     sixbch:{
+       width:'27%',
+       height:80,
+       backgroundColor:'#FEF5FF',
+       borderRadius:6,
+       elevation:1,
+       alignItems:'center',
+       justifyContent:'center',
+     },
+     viewall:{
+        color:'#AE00BB',
         fontWeight:'500',
         marginTop:5,
      },
