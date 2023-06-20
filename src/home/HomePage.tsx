@@ -11,29 +11,55 @@ const HomePage = ({navigation}:any) => {
         </View>
         {/* body side */}
         <View style={styles.bodyview}>
-            {/* available balance */}
+            {/* balance */}
          <View style={styles.available}>
-           <View style={styles.availheader}>
-            <Image source={require("../../assets/svgexport.png")}/>
-            <Text style={styles.availheadertext}>Available Balance</Text>
-           </View>
-           <Text style={styles.availbodytext}>₦0.00</Text>
+          <View style={styles.balhead}>
+            <Text style={styles.totaltext}>Total Balance</Text>
+            <Text style={styles.vivdtext}>Vividpay</Text>
+          </View>
+          <View style={styles.balbody}>
+            <Text style={styles.balbodybal}>₦100000000</Text>
+            <Text style={styles.vivdtext}>Earn & refer</Text>
+          </View>
          </View>
-         {/* withdrawable balance */}
-         <View style={styles.withdraw}>
-           <View style={styles.withheader}>
-            <Image source={require("../../assets/svgexport-2.png")}/>
-            <Text style={styles.withheadertext}>Withdrawable Balance</Text>
-           </View>
-           <Text style={styles.withbodytext}>₦0.00</Text>
+         {/* first three bch */}
+         <View style={styles.fitsttwocarrier}>
+            <View style={styles.firstbch}>
+                <Image source={require('../../assets/svgexport-5.png')}/>
+                <Text style={styles.sendmoney}>Send Money</Text>
+            </View>
+            <View style={styles.secondbch}>
+                <Image source={require('../../assets/svgexport-6.png')}/>
+                <Text style={styles.fundwallet}>Fund Wallet</Text>
+            </View>
+            <View style={styles.thirdbch}>
+                <Image source={require('../../assets/svgexport-7.png')}/>
+                <Text style={styles.cashpin}>Cashpin</Text>
+            </View>
+         </View>
+         {/* second three bch */}
+         <View style={styles.fitsttwocarrier}>
+            <View style={styles.firstbch}>
+                <Image source={require('../../assets/svgexport-5.png')}/>
+                <Text style={styles.sendmoney}>Send Money</Text>
+            </View>
+            <View style={styles.secondbch}>
+                <Image source={require('../../assets/svgexport-6.png')}/>
+                <Text style={styles.fundwallet}>Fund Wallet</Text>
+            </View>
+            <View style={styles.thirdbch}>
+                <Image source={require('../../assets/svgexport-7.png')}/>
+                <Text style={styles.cashpin}>Cashpin</Text>
+            </View>
          </View>
          {/* transactio history */}
-         <View style={styles.trans}>
+         {/* <View style={styles.trans}>
         <View style={styles.transhead}>
         <Text style={styles.text}>Transaction</Text>
         <Text style={styles.text} onPress={()=>navigation.navigate('Transactions')}>View All<Image source={require("../../assets/svgexport-3.png")}/></Text>
         </View>
-         </View>
+         </View> */}
+
          {/* end of body */}
         </View>
     </View>
@@ -74,55 +100,40 @@ const styles = StyleSheet.create({
      },
      available:{
         width:'90%',
-        height:100,
-        backgroundColor:'#ffffff',
-        marginTop:30,
+        height:150,
+        backgroundColor:'#623ECA',
+        marginTop:20,
         elevation:5,
         borderRadius:6
      },
-     availheader:{
-        flexDirection:'row',
-        paddingLeft:15,
-        paddingTop:15
-    },
-     availheadertext:{
-      color: '#220C60',
-      fontSize: 26,
-      fontWeight: 'bold',
-      marginLeft:10,
+     balhead:{
+        flexDirection:"row",
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingHorizontal: 15,
+        paddingTop:15,
      },
-     availbodytext:{
-      color: '#220C60',
-      fontSize: 26,
-      fontWeight: "600",
-      marginLeft:15,
-      marginTop:10,
+     totaltext:{
+       color: '#ffffff',
+      fontSize: 20,
+      fontWeight: '500',
      },
-     withdraw:{
-        width:'90%',
-        height:100,
-        backgroundColor:'#F1F4FB',
-        marginTop:10,
-        elevation:5,
-        borderRadius:6
+     vivdtext:{
+        color:'#ffffff',
+        fontSize:16,
+        fontWeight:'bold'
      },
-     withheader:{
-        flexDirection:'row',
-        paddingLeft:15,
-        paddingTop:15
-    },
-     withheadertext:{
-      color: '#013AC0',
-      fontSize: 26,
-      fontWeight: 'bold',
-      marginLeft:10,
+     balbody:{
+        flexDirection:"row",
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingHorizontal: 15,
+        marginTop:70,
      },
-     withbodytext:{
-      color: '#013AC0',
-      fontSize: 26,
-      fontWeight: "600",
-      marginLeft:15,
-      marginTop:10,
+     balbodybal:{
+        color: '#ffffff',
+      fontSize: 30,
+      fontWeight: '500',
      },
      trans:{
         width:'90%',
@@ -138,6 +149,72 @@ const styles = StyleSheet.create({
        justifyContent:'space-between',
        paddingHorizontal:10,
        paddingVertical:10,
-     }
+     },
+     quicklinks:{
+        width:'90%',
+        height:290,
+        backgroundColor:'#ffffff',
+        marginTop:20,
+        elevation:4,
+        borderRadius:6,
+
+     },
+     textquick:{
+      color: '#00000090',
+      fontSize: 20,
+      fontWeight: "600",
+      marginLeft:15,
+      marginTop:10,
+     },
+     fitsttwocarrier:{
+        width:"100%",
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-evenly',
+        marginTop:20
+     },
+     firstbch:{
+       width:'27%',
+       height:80,
+       backgroundColor:'#FBF1F1',
+       borderRadius:6,
+       elevation:5,
+       alignItems:'center',
+       justifyContent:'center',
+
+     },
+     sendmoney:{
+        color:'#C02634',
+        fontWeight:'500',
+        marginTop:5,
+     },
+     secondbch:{
+       width:'27%',
+       height:80,
+       backgroundColor:'#F0F7F4',
+       borderRadius:6,
+       elevation:5,
+       alignItems:'center',
+       justifyContent:'center',
+     },
+     fundwallet:{
+        color:'#1E8A5E',
+        fontWeight:'500',
+        marginTop:5,
+     },
+     thirdbch:{
+       width:'27%',
+       height:80,
+       backgroundColor:'#F7F6FC',
+       borderRadius:6,
+       elevation:5,
+       alignItems:'center',
+       justifyContent:'center',
+     },
+     cashpin:{
+        color:'#4317C0',
+        fontWeight:'500',
+        marginTop:5,
+     },
 })
 export default HomePage;

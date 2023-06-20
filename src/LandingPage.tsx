@@ -5,7 +5,7 @@ const LandingPage = ({navigation}:any) => {
    useEffect(() => {
     setTimeout(() => {
        navigation.replace('Signin')
-    }, 2000);
+    }, 1000);
    }, [])
    
   return (
