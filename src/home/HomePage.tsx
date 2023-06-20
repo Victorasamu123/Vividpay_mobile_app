@@ -1,5 +1,6 @@
-import { Image, StyleSheet, Text, View , ScrollView} from 'react-native'
+import { Image, StyleSheet, Text, View , ScrollView,Pressable} from 'react-native'
 import React from 'react'
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 
 const HomePage = ({navigation}:any) => {
   return (
@@ -25,33 +26,33 @@ const HomePage = ({navigation}:any) => {
          </View>
          {/* first three bch */}
          <View style={styles.fitsttwocarrier}>
-            <View style={styles.firstbch}>
+            <Pressable onPress={()=>navigation.navigate('Sendmoney')} style={styles.firstbch}>
                 <Image source={require('../../assets/svgexport-5.png')}/>
                 <Text style={styles.sendmoney}>Send Money</Text>
-            </View>
-            <View style={styles.secondbch}>
+                </Pressable>
+            <Pressable onPress={()=>navigation.navigate('Fundwallet')} style={styles.secondbch}>
                 <Image source={require('../../assets/svgexport-6.png')}/>
                 <Text style={styles.fundwallet}>Fund Wallet</Text>
-            </View>
-            <View style={styles.thirdbch}>
+                </Pressable>
+            <Pressable onPress={()=>navigation.navigate('Cashpin')} style={styles.thirdbch}>
                 <Image source={require('../../assets/svgexport-7.png')}/>
                 <Text style={styles.cashpin}>Cashpin</Text>
-            </View>
+         </Pressable>
          </View>
          {/* second three bch */}
          <View style={styles.fitsttwocarrier}>
-            <View style={styles.fourbch}>
+              <Pressable onPress={()=>navigation.navigate('Airtime')} style={styles.fourbch}>
                 <Image source={require('../../assets/svgexport-8.png')}/>
                 <Text style={styles.airtime}>Airtime</Text>
-            </View>
-            <View style={styles.fivebch}>
+                </Pressable>
+            <Pressable onPress={()=>navigation.navigate('Paybills')} style={styles.fivebch}>
                 <Image source={require('../../assets/svgexport-9.png')}/>
                 <Text style={styles.paybills}>Pay Bills</Text>
-            </View>
-            <View style={styles.sixbch}>
+                </Pressable>
+                <Pressable onPress={()=>navigation.navigate('Viewall')} style={styles.sixbch}>
                 <Image source={require('../../assets/svgexport-10.png')}/>
                 <Text style={styles.viewall}>View All</Text>
-            </View>
+                </Pressable>
          </View>
          {/* transactio history */}
          <View style={styles.trans}>

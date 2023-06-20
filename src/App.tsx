@@ -34,6 +34,11 @@ import SignUp from './auth/SignUp';
 import CompSignup from './auth/CompSignup';
 import Home from './home/Home';
 import Transactions from './home/Transactions';
+import SendMoney from './home/SendMoney';
+import Airtime from './home/Airtime';
+import PayBills from './home/PayBills';
+import FundWallet from './home/FundWallet';
+import ViewAll from './home/ViewAll';
 const Stack = createStackNavigator()
 function App(): JSX.Element {
   
@@ -77,6 +82,41 @@ function App(): JSX.Element {
         component={Home}
         options={{
           header:()=>null,
+         }}
+      />
+      <Stack.Screen
+        name="Sendmoney"
+        component={SendMoney}
+        options={{
+          // header:()=>null,
+         }}
+      />
+      <Stack.Screen
+        name="Airtime"
+        component={Airtime}
+        options={{
+          // header:()=>null,
+         }}
+      />
+      <Stack.Screen
+        name="Paybills"
+        component={PayBills}
+        options={{
+          // header:()=>null,
+         }}
+      />
+      <Stack.Screen
+        name="Fundwallet"
+        component={FundWallet}
+        options={{
+          // header:()=>null,
+         }}
+      />
+      <Stack.Screen
+        name="Viewall"
+        component={ViewAll}
+        options={{
+          // header:()=>null,
          }}
       />
       <Stack.Screen
