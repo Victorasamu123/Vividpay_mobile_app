@@ -68,7 +68,7 @@ const SignUp = ({navigation}:any) => {
         </Text>
       </Pressable>
       <View>
-          <Text style={styles.qes}>Already have an Account? <Text onPress={()=>navigation.navigate('Signin')} style={styles.qes2}>Signup</Text></Text>
+          <Text style={styles.qes}>Already have an Account? <Text onPress={()=>navigation.navigate('Signin')} style={styles.qes2}>Signin</Text></Text>
       </View>
     </View>
   </ImageBackground>

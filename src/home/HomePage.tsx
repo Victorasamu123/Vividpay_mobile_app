@@ -1,8 +1,11 @@
 import { Image, StyleSheet, Text, View , ScrollView,Pressable} from 'react-native'
-import React from 'react'
+import React , {useEffect,useState}from 'react'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 
 const HomePage = ({navigation}:any) => {
+  const [AccountBalance, setAccountBalance]=useState<number>(100000000)
+
+  const accountNum = AccountBalance.toLocaleString()
   return (
      <View style={styles.body}>
        <ScrollView>
@@ -20,7 +23,7 @@ const HomePage = ({navigation}:any) => {
             <Text style={styles.vivdtext}>Vividpay</Text>
           </View>
           <View style={styles.balbody}>
-            <Text style={styles.balbodybal}>₦100000000</Text>
+            <Text style={styles.balbodybal}>₦{accountNum}</Text>
             <Text style={styles.vivdtext}>Earn & refer</Text>
           </View>
          </View>
