@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         width:'100%',
         height:"90%",
         backgroundColor:'#F1F1F1',
-        alignItems:"center"
+        alignItems:"center",
      },
      available:{
         width:'90%',
@@ -146,9 +146,9 @@ const styles = StyleSheet.create({
         height:90,
         backgroundColor:'#ffffff',
         marginTop:20,
-        elevation:4,
+        elevation:1,
         borderRadius:6,
-        
+        marginBottom:40,
      },
      transhead:{
        flexDirection:'row',

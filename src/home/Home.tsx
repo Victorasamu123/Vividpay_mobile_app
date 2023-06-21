@@ -4,6 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomePage from './HomePage';
 import CashPin from './CashPin';
+import Cards from './Cards';
+import Profile from './Profile';
 const Home = () => {
     const Tab = createBottomTabNavigator();
   return (
@@ -20,6 +22,20 @@ const Home = () => {
         <Tab.Screen 
          name="Cashpin"
          component={CashPin}
+        //  options={{
+        //     header:()=>null
+        //  }}
+        />
+        <Tab.Screen 
+         name="Cards"
+         component={Cards}
+        //  options={{
+        //     header:()=>null
+        //  }}
+        />
+        <Tab.Screen 
+         name="Profile"
+         component={Profile}
         //  options={{
         //     header:()=>null
         //  }}
