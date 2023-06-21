@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
   mtn:{
     height:50,
     width:50,
+    borderRadius:6,
   },
   phoneInput:{
     width:'95%',
