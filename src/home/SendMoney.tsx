@@ -1,20 +1,26 @@
-import { StyleSheet, Text, View, ScrollView,Pressable } from 'react-native'
+import { StyleSheet, Text, View, ScrollView,Pressable, TextInput} from 'react-native'
 import React from 'react'
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 
-const SendMoney = ({navigate}:any)=>{
+const SendMoney = ({navigation}:any)=>{
     return(
     <ScrollView style={styles.body}>
      <View style={styles.bodyView}>
       <View style={styles.bodyHead}>
          <Pressable style={styles.toVividpay}>
-            <Text style={styles.optionText}>Send fund To Vividpay</Text>
+            <Text style={styles.optionText}>Send</Text>
+            <Text style={styles.optionText}>To</Text>
+            <Text style={styles.optionText}>Vividpay</Text>
          </Pressable>
-         <Pressable style={styles.toOtherBanks}>
-
+         <Pressable onPress={()=>navigation.navigate('OtherBanks')} style={styles.toOtherBanks}>
+            <Text style={styles.optionText2}>Send</Text>
+            <Text style={styles.optionText2}>To</Text>
+            <Text style={styles.optionText2}>other Banks</Text>
          </Pressable>
-         <Pressable style={styles.toOtherBanks}>
-
+         <Pressable onPress={()=>navigation.navigate('PrepaidAccount')} style={styles.toOtherBanks}>
+            <Text style={styles.optionText2}>Send</Text>
+            <Text style={styles.optionText2}>To</Text>
+            <Text style={styles.optionText2}>prepaid account</Text>
          </Pressable>
       </View>
      </View>
@@ -58,6 +64,16 @@ const styles = StyleSheet.create({
     borderRadius:6,
     borderColor:'#623ECA',
     borderWidth:1,
+    alignItems:'center',
+    justifyContent:'center'
+  },
+  optionText:{
+    color:"#ffffff",
+    fontSize:18,
+  },
+  optionText2:{
+    color:"#623ECA",
+    fontSize:18,
   }
 })
 export default SendMoney;

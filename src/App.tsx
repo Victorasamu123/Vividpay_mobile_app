@@ -39,6 +39,8 @@ import Airtime from './home/Airtime';
 import PayBills from './home/PayBills';
 import FundWallet from './home/FundWallet';
 import ViewAll from './home/ViewAll';
+import OtherBanks from './home/OthersBanks';
+import Prepaid from './home/Prepaid';
 const Stack = createStackNavigator()
 function App(): JSX.Element {
   
@@ -122,6 +124,20 @@ function App(): JSX.Element {
       <Stack.Screen
         name="Transactions"
         component={Transactions}
+        options={{
+          // header:()=>null,
+         }}
+      />
+      <Stack.Screen
+        name="OtherBanks"
+        component={OtherBanks}
+        options={{
+          // header:()=>null,
+         }}
+      />
+      <Stack.Screen
+        name="PrepaidAccount"
+        component={Prepaid}
         options={{
           // header:()=>null,
          }}

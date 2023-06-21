@@ -3,6 +3,7 @@ import React ,{useState,useEffect}from 'react'
 
 const Airtime = ()=>{
   const [isFocused, setIsFocused]=useState(false);
+  const [isFocused2, setIsFocused2]=useState(false);
   const handleFocus = () => {
     setIsFocused(true);
   };
@@ -10,9 +11,20 @@ const Airtime = ()=>{
   const handleBlur = () => {
     setIsFocused(false);
   };
+  const handleFocus2 = () => {
+    setIsFocused2(true);
+  };
+
+  const handleBlur2 = () => {
+    setIsFocused2(false);
+  };
   const inputStyles = [
     styles.input,
     isFocused ? styles.inputFocused : null,
+  ];
+  const inputStyles2 = [
+    styles.input2,
+    isFocused2 ? styles.inputFocused : null,
   ];
     return(
      <ScrollView style={styles.body}>
@@ -24,7 +36,7 @@ const Airtime = ()=>{
             <Image source={require('../../assets/download.jpg')} style={styles.mtn}/>
           </View>
           <View style={styles.phoneInput}>
-          <TextInput placeholder='Enter valid number' keyboardType='phone-pad' placeholderTextColor="#757576" style={inputStyles} onFocus={handleFocus} onBlur={handleBlur}/>
+          <TextInput placeholder='Enter valid number' keyboardType='phone-pad' placeholderTextColor="#757576" style={inputStyles2} onFocus={handleFocus2} onBlur={handleBlur2}/>
           </View>
           <View style={styles.predictableAmount}>
            <View style={styles.fifty}>
@@ -103,6 +115,15 @@ const styles = StyleSheet.create({
     padding:10,
   },
   input:{
+    width:"100%",
+    height:'100%',
+    backgroundColor:"#F0F1F3",
+    borderRadius:4,
+    color:"#757576",
+    fontWeight:"500",
+    fontSize:18,
+  },
+  input2:{
     width:"100%",
     height:'100%',
     backgroundColor:"#F0F1F3",
