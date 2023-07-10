@@ -23,6 +23,9 @@ const SendMoney = ({navigation}:any)=>{
             <Text style={styles.optionText2}>prepaid account</Text>
          </Pressable>
       </View>
+      <View>
+        
+      </View>
      </View>
     </ScrollView>
   )

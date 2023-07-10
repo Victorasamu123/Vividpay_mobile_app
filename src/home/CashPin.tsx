@@ -4,9 +4,10 @@ import React from 'react'
 const CashPin = ()=>{
     return(
     <View>
-    <Text>Transactions</Text>
+    <Text></Text>
   </View>
   )
 }
+
 
 export default CashPin;

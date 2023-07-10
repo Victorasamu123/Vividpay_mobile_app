@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   head:{
     width:'95%',
     height:80,
-    backgroundColor:'#ffffff',
+    backgroundColor:'#F0F1F3',
     elevation: 1,
     marginTop:20,
     borderRadius: 6,
@@ -106,13 +106,15 @@ const styles = StyleSheet.create({
   phoneInput:{
     width:'95%',
     height:80,
-    backgroundColor:'#ffffff',
+    backgroundColor:'#F0F1F3',
     elevation: 1,
     marginTop:20,
     borderRadius: 6,
     alignItems:'center',
     justifyContent:"center",
     padding:10,
+    borderColor: '#623ECA',
+    borderWidth:1,
   },
   input:{
     width:"100%",
@@ -133,7 +135,7 @@ const styles = StyleSheet.create({
     fontSize:18,
   },
     inputFocused: {
-    borderColor: '#623ECA',
+    borderColor: 'transparent',
     borderWidth:1,
   },
   predictableAmount:{
